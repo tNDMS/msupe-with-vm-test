@@ -306,6 +306,16 @@ body._lock {
   padding: 2rem 0 0 2rem;
 }
 
+.sample-title {
+  font-size: 3.2rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+
+.about-block {
+  display: flex;
+  flex-direction: column;
+}
 .about-block__body {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -402,6 +412,53 @@ body._lock {
   font-size: 3.2rem;
   font-weight: 500;
   text-align: center;
+}
+
+.administration {
+  margin: 10rem 0;
+}
+.administration__title {
+  margin-bottom: 2rem;
+}
+.administration__link {
+  color: #a7a7a7;
+  text-decoration: underline;
+}
+.administration__body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.worker-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.worker-card__photo {
+  margin-bottom: 2rem;
+}
+.worker-card__photo img {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+}
+.wc-text__title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+.wc-text__jobtitle {
+  color: #7A7A7A;
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+.wc-text__mail {
+  color: #000;
+  font-size: 1.6rem;
+  font-weight: 600;
 }
 
 .contacts {

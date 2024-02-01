@@ -132,12 +132,11 @@ body._lock {
 }
 /*................................................*/
 
-
 .switch-language {
 	position: absolute;
 	top: 0;
 	right: 0;
-	padding: .2rem;
+	padding: 0.2rem;
 	&__icon {
 		display: flex;
 		justify-content: center;
@@ -154,9 +153,8 @@ body._lock {
 		top: -70%;
 		right: 0;
 		display: block;
-		transition: all .5s ease 0s;
+		transition: all 0.5s ease 0s;
 		transform: rotate(45deg) translate(0px, 50%);
-
 	}
 	&__menu._active {
 		top: 35px;
@@ -246,8 +244,18 @@ body._lock {
 		padding: 2rem 0 0 2rem;
 	}
 }
+.sample-title {
+	font-size: 3.2rem;
+	font-weight: 600;
+	margin-bottom: 3rem;
+}
 
 .about-block {
+	display: flex;
+	flex-direction: column;
+
+	&__title {
+	}
 	&__body {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -258,17 +266,16 @@ body._lock {
 	&__image {
 		height: 46rem;
 		// background: #fff url("../../../img/about/mgppu-flag.jpg") no-repeat;
-      
 	}
-    &__image img {
-        height: 46rem;
-        width: 46rem;
-        background-repeat: no-repeat;
+	&__image img {
+		height: 46rem;
+		width: 46rem;
+		background-repeat: no-repeat;
 		background-position-x: center;
 		background-size: cover;
 		object-fit: cover;
 		object-position: center center;
-    }
+	}
 
 	&__text {
 		padding: 0 1.5rem 1.5rem 1.5rem;
@@ -279,7 +286,6 @@ body._lock {
 }
 
 .text-about-block {
-	
 	&__block {
 		display: flex;
 		flex-direction: column;
@@ -317,10 +323,10 @@ body._lock {
 		background-color: #000000;
 		cursor: pointer;
 		white-space: nowrap;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 	&__button a {
 		font-family: "Montserrat", Sans-serif;
@@ -331,43 +337,97 @@ body._lock {
 	}
 }
 
-
 .achievements {
-    margin-bottom: 7rem;
+	margin-bottom: 7rem;
 
-    &__block {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
+	&__block {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+	}
 
-    &__block-item {
-        display: flex;
-        flex-direction: column;
-        max-width: 270px;
-    }
+	&__block-item {
+		display: flex;
+		flex-direction: column;
+		max-width: 270px;
+	}
 
-    &__block-item-number {
-        text-align: center;
-        color: #000;
-        font-size: 7.2rem;
-        font-weight: 600;
-    }
+	&__block-item-number {
+		text-align: center;
+		color: #000;
+		font-size: 7.2rem;
+		font-weight: 600;
+	}
 
-    &__block-item-text {
-        color: #000;
-        font-size: 3.2rem;
-        font-weight: 500;
-        text-align: center;
-
-    }
+	&__block-item-text {
+		color: #000;
+		font-size: 3.2rem;
+		font-weight: 500;
+		text-align: center;
+	}
 }
 
+.administration {
+	margin: 10rem 0;
+	&__title {
+		margin-bottom: 2rem;
+	}
 
+	&__link {
+		color: #a7a7a7;
+		text-decoration: underline;
+	}
 
+	&__body {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
 
+.worker-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	&__photo {
+		margin-bottom: 2rem;
+	}
+	&__photo img {
+		height: 300px;
+		width: 300px;
+		border-radius: 50%;
+	}
+
+	&__text {
+	}
+}
+.rector {
+}
+.wc-text {
+	&__title {
+		font-size: 1.8rem;
+		font-weight: 600;
+		margin-bottom: 2rem;
+	}
+
+	&__jobtitle {
+		color: #7A7A7A;
+		font-size: 1.6rem;
+		margin-bottom: 2rem;
+
+	}
+
+	&__mail {
+		color: #000;
+		font-size: 1.6rem;
+		font-weight: 600;
+
+	}
+}
 
 .contacts {
 	margin-bottom: 2rem;
@@ -497,17 +557,17 @@ body._lock {
 		}
 	}
 
-    .achievements{
-        &__block {
-            flex-direction: column;
-        }
-        &__block-item {
-            margin-bottom: 2rem;
-        }
-        &__block-item:last-child {
-            margin-bottom: 0;
-        }
-    }
+	.achievements {
+		&__block {
+			flex-direction: column;
+		}
+		&__block-item {
+			margin-bottom: 2rem;
+		}
+		&__block-item:last-child {
+			margin-bottom: 0;
+		}
+	}
 
 	.about-block {
 		display: flex;
@@ -524,16 +584,16 @@ body._lock {
 		max-width: 750px;
 	}
 	.about-block__image {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		width: 100%;
-        height: auto;
-        margin-bottom: 2rem;
+		height: auto;
+		margin-bottom: 2rem;
 	}
-    .about-block__image img {
-        width: 100%;
-    }
+	.about-block__image img {
+		width: 100%;
+	}
 	.text-about-block {
 		&__title {
 			margin: 2rem 0rem 2rem 0rem;
@@ -545,8 +605,6 @@ body._lock {
 			margin-bottom: 1rem;
 		}
 	}
-
-	
 
 	.contacts {
 		padding: 4rem 0;
@@ -653,7 +711,6 @@ body._lock {
 			position: relative;
 			top: -2.2rem;
 			left: 16rem;
-            
 		}
 		&__form img {
 			width: 30px;
