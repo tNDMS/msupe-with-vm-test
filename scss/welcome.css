@@ -1,0 +1,30 @@
+.welcome__body {
+  display: flex;
+  flex-direction: row;
+}
+.welcome__image img {
+  width: 54rem;
+}
+.text-welcome__title {
+  color: #000000;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+.text-welcome__block {
+  display: flex;
+  flex-direction: column;
+}
+.text-welcome__block b {
+  color: #000000;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.text-welcome__block span {
+  color: #000000;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
