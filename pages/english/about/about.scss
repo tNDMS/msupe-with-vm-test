@@ -55,12 +55,6 @@ body._lock {
 		max-width: 750px;
 	}
 }
-/* MOBILE */
-@media (max-width: 767.98px) {
-	.container {
-		max-width: none;
-	}
-}
 
 .header {
 	position: absolute;
@@ -145,35 +139,136 @@ body._lock {
 		width: 40px;
 		height: 40px;
 		position: relative;
+		text-decoration: underline;
 		cursor: pointer;
 	}
 
 	&__menu {
-		position: absolute;
-		top: -70%;
-		right: 0;
-		display: block;
-		transition: all 0.5s ease 0s;
-		transform: rotate(45deg) translate(0px, 50%);
 	}
 	&__menu._active {
-		top: 35px;
-		right: 0;
-		padding: 1rem;
-		border-radius: 5px;
-		background-color: #0000004a;
-		transform: rotate(0) translate(0px, 50%);
 	}
 }
 .sl-menu {
-	&__list {
+	display: none;
+	position: absolute;
+	top: 20px;
+	right: 0;
+	display: block;
+	transition: all 0.5s ease 0s;
+	opacity: 0;
+	&._active {
+		display: block;
+		top: 38px;
+		right: 0;
+		padding: 1rem;
+		border: 0.5px solid #fff;
+		border-radius: 5px;
+		background-color: #696859;
+		opacity: 1;
 	}
-
+	&__list {
+		display: none;
+	}
+	&__list._active {
+		display: block;
+	}
 	&__item {
 		margin-bottom: 1rem;
 	}
 	&__item:last-child {
 		margin-bottom: 0;
+	}
+	&__item a {
+		display: flex;
+		flex-direction: row;
+		justify-content: start;
+		align-items: center;
+		text-decoration: underline;
+	}
+	&__item img {
+		width: 24px;
+		margin-left: 1rem;
+	}
+}
+
+/*................................................*/
+
+.image-text-block {
+	display: flex;
+	flex-direction: column;
+	&__title {
+		margin-bottom: 3rem;
+		font-size: 3.6rem;
+		padding: 0 1rem;
+	}
+
+	&__body {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		max-width: 100%;
+		padding: 0 1rem;
+	}
+
+	&__text {
+		line-height: 29px;
+		font-weight: 400;
+		font-size: 1.8rem;
+		flex: 0 1 50%;
+		padding: 0 2rem 1rem 1rem;
+	}
+
+	&__image {
+		height: 29.4rem;
+		flex: 0 1 50%;
+	}
+	&__image img {
+		object-fit: cover;
+		object-position: center center;
+		height: 100%;
+		width: 100%;
+	}
+}
+
+/*................................................*/
+
+.worker-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	&__photo {
+		margin-bottom: 2rem;
+	}
+	&__photo img {
+		height: 300px;
+		width: 300px;
+		border-radius: 50%;
+	}
+
+	&__text {
+	}
+}
+
+.wc-text {
+	&__title {
+		font-size: 1.8rem;
+		font-weight: 600;
+		margin-bottom: 2rem;
+	}
+
+	&__jobtitle {
+		color: #7a7a7a;
+		font-size: 1.6rem;
+		margin-bottom: 2rem;
+	}
+
+	&__mail {
+		color: #000;
+		font-size: 1.6rem;
+		font-weight: 600;
 	}
 }
 
@@ -248,14 +343,13 @@ body._lock {
 	font-size: 3.2rem;
 	font-weight: 600;
 	margin-bottom: 3rem;
+	padding: 0 1rem;
 }
 
 .about-block {
 	display: flex;
 	flex-direction: column;
 
-	&__title {
-	}
 	&__body {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -264,12 +358,12 @@ body._lock {
 	}
 
 	&__image {
-		height: 46rem;
-		// background: #fff url("../../../img/about/mgppu-flag.jpg") no-repeat;
+		height: 100%;
+		padding: 0 1rem;
 	}
 	&__image img {
-		height: 46rem;
-		width: 46rem;
+		height: 100%;
+		width: 100%;
 		background-repeat: no-repeat;
 		background-position-x: center;
 		background-size: cover;
@@ -281,7 +375,6 @@ body._lock {
 		padding: 0 1.5rem 1.5rem 1.5rem;
 		display: flex;
 		flex-direction: column;
-		max-height: 56rem;
 	}
 }
 
@@ -387,45 +480,23 @@ body._lock {
 	}
 }
 
-.worker-card {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	&__photo {
-		margin-bottom: 2rem;
+.mission {
+	margin-bottom: 10rem;
+	&__container {
 	}
-	&__photo img {
-		height: 300px;
-		width: 300px;
-		border-radius: 50%;
+}
+
+.mission-block {
+	&__title {
+	}
+
+	&__body {
 	}
 
 	&__text {
 	}
-}
-.rector {
-}
-.wc-text {
-	&__title {
-		font-size: 1.8rem;
-		font-weight: 600;
-		margin-bottom: 2rem;
-	}
 
-	&__jobtitle {
-		color: #7A7A7A;
-		font-size: 1.6rem;
-		margin-bottom: 2rem;
-
-	}
-
-	&__mail {
-		color: #000;
-		font-size: 1.6rem;
-		font-weight: 600;
-
+	&__image {
 	}
 }
 
@@ -548,6 +619,21 @@ body._lock {
 	}
 }
 
+/* MOBILE */
+@media (max-width: 767.98px) {
+	.container {
+		max-width: none;
+	}
+
+	.mission-block {
+		flex-direction: column;
+		&__body {
+			padding: 0;
+			flex-direction: column;
+		}
+	}
+}
+
 /* TABLET */
 @media (max-width: 991.98px) {
 	.about-header {
@@ -581,7 +667,6 @@ body._lock {
 		flex-direction: column;
 		justify-content: center;
 		align-items: start;
-		max-width: 750px;
 	}
 	.about-block__image {
 		display: flex;
@@ -605,7 +690,12 @@ body._lock {
 			margin-bottom: 1rem;
 		}
 	}
-
+	.mission-block__text {
+		flex: 0 1 40%;
+	}
+	.mission-block__image {
+		flex: 0 1 60%;
+	}
 	.contacts {
 		padding: 4rem 0;
 		height: auto;
@@ -623,7 +713,7 @@ body._lock {
 	}
 
 	.container {
-		max-width: 750px;
+		max-width: 97rem;
 	}
 	.menu__list {
 		margin: 0rem 0rem 0rem 1rem;
@@ -651,7 +741,7 @@ body._lock {
 	.switch-language {
 		top: 25%;
 		&__menu._active {
-			top: 30%;
+			top: 35%;
 		}
 	}
 
@@ -736,9 +826,9 @@ body._lock {
 		padding: 0;
 	}
 	.switch-language {
-		top: 65%;
+		top: 80%;
 		&__menu._active {
-			top: 70%;
+			top: 115%;
 		}
 	}
 
