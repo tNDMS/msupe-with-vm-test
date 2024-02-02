@@ -232,9 +232,16 @@ body._lock {
   align-items: center;
   padding: 1rem;
 }
-.top__logo img {
+.top__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 9rem;
   width: 16rem;
+}
+.top__logo img {
+  height: 90%;
+  width: 90%;
 }
 .top .search__container {
   border: 1px solid #fff;

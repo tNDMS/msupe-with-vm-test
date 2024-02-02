@@ -77,9 +77,16 @@ body._lock {
 	align-items: center;
 	padding: 1rem;
 
-	&__logo img {
+	&__logo {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		height: 9rem;
 		width: 16rem;
+	}
+	&__logo img {
+		height: 90%;
+		width: 90%;
 	}
 
 	.search {
