@@ -1,4 +1,5 @@
 @import "_null";
+@import "./templates/switch-language.scss";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 html,
 body {
@@ -132,54 +133,6 @@ body._lock {
 }
 /*................................................*/
 
-
-.switch-language {
-	position: absolute;
-	top: 0;
-	right: 0;
-	padding: .2rem;
-	&__icon {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		font-size: 1.8rem;
-		width: 40px;
-		height: 40px;
-		position: relative;
-		cursor: pointer;
-	}
-
-	&__menu {
-		position: absolute;
-		top: -70%;
-		right: 0;
-		display: block;
-		transition: all .5s ease 0s;
-		transform: rotate(45deg) translate(0px, 50%);
-
-	}
-	&__menu._active {
-		top: 35px;
-		right: 0;
-		padding: 1rem;
-		border-radius: 5px;
-		background-color: #0000004a;
-		transform: rotate(0) translate(0px, 50%);
-	}
-}
-.sl-menu {
-	&__list {
-	}
-
-	&__item {
-		margin-bottom: 1rem;
-	}
-	&__item:last-child {
-		margin-bottom: 0;
-	}
-}
-
-/*................................................*/
 
 .icon-menu {
 	display: none;
@@ -577,13 +530,6 @@ body._lock {
 	}
 }
 @media (max-width: 690.98px) {
-	.switch-language {
-		top: 25%;
-		&__menu._active {
-			top: 30%;
-		}
-	}
-
 	.admissions__body h1 {
 		font-size: 5.2rem;
 		margin: 35rem 0rem 1rem 0rem;
@@ -663,12 +609,6 @@ body._lock {
 @media (max-width: 499.98px) {
 	.container {
 		padding: 0;
-	}
-	.switch-language {
-		top: 65%;
-		&__menu._active {
-			top: 70%;
-		}
 	}
 
 	.menu__icon {

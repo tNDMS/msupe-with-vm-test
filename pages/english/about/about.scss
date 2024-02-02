@@ -1,4 +1,5 @@
 @import "../../../scss/null";
+@import "../../../scss/templates/switch-language.scss";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 html,
 body {
@@ -126,72 +127,8 @@ body._lock {
 }
 /*................................................*/
 
-.switch-language {
-	position: absolute;
-	top: 0;
-	right: 0;
-	padding: 0.2rem;
-	&__icon {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		font-size: 1.8rem;
-		width: 40px;
-		height: 40px;
-		position: relative;
-		text-decoration: underline;
-		cursor: pointer;
-	}
 
-	&__menu {
-	}
-	&__menu._active {
-	}
-}
-.sl-menu {
-	display: none;
-	position: absolute;
-	top: 20px;
-	right: 0;
-	display: block;
-	transition: all 0.5s ease 0s;
-	opacity: 0;
-	&._active {
-		display: block;
-		top: 38px;
-		right: 0;
-		padding: 1rem;
-		border: 0.5px solid #fff;
-		border-radius: 5px;
-		background-color: #696859;
-		opacity: 1;
-	}
-	&__list {
-		display: none;
-	}
-	&__list._active {
-		display: block;
-	}
-	&__item {
-		margin-bottom: 1rem;
-	}
-	&__item:last-child {
-		margin-bottom: 0;
-	}
-	&__item a {
-		display: flex;
-		flex-direction: row;
-		justify-content: start;
-		align-items: center;
-		text-decoration: underline;
-	}
-	&__item img {
-		width: 24px;
-		margin-left: 1rem;
-	}
-}
 
-/*................................................*/
 
 .image-text-block {
 	display: flex;
@@ -482,21 +419,118 @@ body._lock {
 
 .mission {
 	margin-bottom: 10rem;
-	&__container {
-	}
 }
 
-.mission-block {
-	&__title {
-	}
-
+.history {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 15rem;
+}
+.history-block {
 	&__body {
-	}
-
-	&__text {
+		display: flex;
+		flex-direction: column;
 	}
 
 	&__image {
+		width: 100%;
+		height: 100%;
+		max-height: 22.3rem;
+		margin-bottom: 2rem;
+	}
+	&__image img {
+		width: 100%;
+		height: 223px;
+		object-fit: cover;
+		object-position: center center;
+	}
+	&__text {
+		text-align-last: left;
+		width: 100%;
+		padding: 0;
+	}
+	&__text b {
+		margin-right: 1rem;
+	}
+
+	&__text p {
+		font-size: 1.8rem;
+		font-weight: 400;
+		margin-bottom: 2rem;
+	}
+	&__text p:last-child {
+		margin-bottom: 0;
+	}
+}
+.today {
+	margin-bottom: 5rem;
+	&-block {
+		&__body {
+			width: 100%;
+			justify-content: space-between;
+		}
+		&__image {
+			height: 29.4rem;
+			margin-bottom: 2rem;
+		}
+		&__text  {
+			padding-left: 2rem;
+		}
+		&__text p {
+			vertical-align: middle;
+			margin-bottom: 2rem;
+		}
+		&-block__text p:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.ranks {
+	margin-bottom: 5rem;
+	&-block {
+		&__title {
+			font-size: 1.8rem;
+			font-weight: 400;
+		}
+
+		&__body {
+		}
+
+		&__text {
+			font-size: 1.8rem;
+			font-weight: 400;
+			line-height: 29px;
+		}
+
+		&__image {
+			height: 29.4rem;
+			flex: 0 1 50%;
+		}
+		&__image img {
+			object-fit: cover;
+			object-position: center;
+			height: 100%;
+			width: 100%;
+		}
+	}
+}
+
+.standarts {
+	margin-bottom: 10rem;
+	&-block {
+		&__image {
+			height: 285px;
+		}
+		&__text {
+			padding-left: 2rem;
+		}
+		&__text p {
+			margin-bottom: 2rem;
+		}
+		&__text p:last-child {
+			margin-bottom: 0;
+		}
 	}
 }
 
@@ -625,12 +659,42 @@ body._lock {
 		max-width: none;
 	}
 
+	.image-text-block {
+		flex-direction: column;
+		&__body {
+			padding: 0;
+			flex-direction: column;
+		}
+	}
 	.mission-block {
 		flex-direction: column;
 		&__body {
 			padding: 0;
 			flex-direction: column;
 		}
+	}
+	.ranks-block__title {
+		padding: 0 1rem;
+	}
+	.image-text-block {
+		&__body {
+			padding: 0 1rem;
+		}
+		&__image {
+			padding: 0;
+		}
+		&__text {
+			padding: 0;
+		}
+	}
+	.standarts {
+		&-block__body {
+			flex-direction: column-reverse;
+		}
+		&-block__image {
+			margin-top: 2rem;
+		}
+
 	}
 }
 
@@ -690,12 +754,33 @@ body._lock {
 			margin-bottom: 1rem;
 		}
 	}
-	.mission-block__text {
-		flex: 0 1 40%;
+
+	.image-text-block {
+		&__text {
+			flex: 0 1 40%;
+		}
+		&__image {
+			flex: 0 1 60%;
+		}
 	}
-	.mission-block__image {
-		flex: 0 1 60%;
+	.today-block {
+		&__text {
+			flex: 0 1 50%;
+		}
+		&__image {
+			flex: 0 1 50%;
+		}
 	}
+
+	.ranks-block {
+		&__text {
+			flex: 0 1 60%;
+		}
+		&__image {
+			flex: 0 1 40%;
+		}
+	}
+
 	.contacts {
 		padding: 4rem 0;
 		height: auto;
@@ -738,12 +823,6 @@ body._lock {
 	}
 }
 @media (max-width: 690.98px) {
-	.switch-language {
-		top: 25%;
-		&__menu._active {
-			top: 35%;
-		}
-	}
 
 	.about-header h1 {
 		font-size: 5.2rem;
@@ -824,12 +903,6 @@ body._lock {
 @media (max-width: 499.98px) {
 	.container {
 		padding: 0;
-	}
-	.switch-language {
-		top: 80%;
-		&__menu._active {
-			top: 115%;
-		}
 	}
 
 	.menu__icon {
@@ -942,8 +1015,11 @@ body._lock {
 			}
 		}
 	}
-	.cards {
-		margin-top: 8rem;
+	.history {
+		margin-bottom: 7rem;
+		&-block__text {
+			padding: 0 1rem;
+		}
 	}
 	.about-block__image {
 		object-fit: cover;

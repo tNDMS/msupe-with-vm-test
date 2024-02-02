@@ -77,6 +77,84 @@ select {
     scroll-behavior: auto !important;
   }
 }
+.switch-language {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.2rem;
+}
+.switch-language__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.sl-menu {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  display: block;
+  transition: all 0.5s ease 0s;
+  opacity: 0;
+}
+.sl-menu._active {
+  display: block;
+  top: 38px;
+  right: 0;
+  padding: 1rem;
+  border: 0.5px solid #fff;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.2509803922);
+  opacity: 1;
+}
+.sl-menu__list {
+  display: none;
+}
+.sl-menu__list._active {
+  display: block;
+}
+.sl-menu__item {
+  margin-bottom: 1rem;
+}
+.sl-menu__item:last-child {
+  margin-bottom: 0;
+}
+.sl-menu__item a {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  text-decoration: underline;
+}
+.sl-menu__item img {
+  width: 24px;
+  margin-left: 1rem;
+}
+
+/*................................................*/
+@media (max-width: 690.98px) {
+  .switch-language {
+    top: 25%;
+  }
+  .switch-language__menu._active {
+    top: 35%;
+  }
+}
+@media (max-width: 499.98px) {
+  .switch-language {
+    top: 80%;
+  }
+  .switch-language__menu._active {
+    top: 115%;
+  }
+}
 html,
 body {
   height: 100%;
@@ -196,67 +274,6 @@ body._lock {
 }
 .top .icon-link {
   padding-left: 2.5rem;
-}
-
-/*................................................*/
-.switch-language {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 0.2rem;
-}
-.switch-language__icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.8rem;
-  width: 40px;
-  height: 40px;
-  position: relative;
-  text-decoration: underline;
-  cursor: pointer;
-}
-.sl-menu {
-  display: none;
-  position: absolute;
-  top: 20px;
-  right: 0;
-  display: block;
-  transition: all 0.5s ease 0s;
-  opacity: 0;
-}
-.sl-menu._active {
-  display: block;
-  top: 38px;
-  right: 0;
-  padding: 1rem;
-  border: 0.5px solid #fff;
-  border-radius: 5px;
-  background-color: #696859;
-  opacity: 1;
-}
-.sl-menu__list {
-  display: none;
-}
-.sl-menu__list._active {
-  display: block;
-}
-.sl-menu__item {
-  margin-bottom: 1rem;
-}
-.sl-menu__item:last-child {
-  margin-bottom: 0;
-}
-.sl-menu__item a {
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  align-items: center;
-  text-decoration: underline;
-}
-.sl-menu__item img {
-  width: 24px;
-  margin-left: 1rem;
 }
 
 /*................................................*/
@@ -516,6 +533,107 @@ body._lock {
 .mission {
   margin-bottom: 10rem;
 }
+
+.history {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15rem;
+}
+
+.history-block__body {
+  display: flex;
+  flex-direction: column;
+}
+.history-block__image {
+  width: 100%;
+  height: 100%;
+  max-height: 22.3rem;
+  margin-bottom: 2rem;
+}
+.history-block__image img {
+  width: 100%;
+  height: 223px;
+  object-fit: cover;
+  object-position: center center;
+}
+.history-block__text {
+  text-align-last: left;
+  width: 100%;
+  padding: 0;
+}
+.history-block__text b {
+  margin-right: 1rem;
+}
+.history-block__text p {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+.history-block__text p:last-child {
+  margin-bottom: 0;
+}
+
+.today {
+  margin-bottom: 5rem;
+}
+.today-block__body {
+  width: 100%;
+  justify-content: space-between;
+}
+.today-block__image {
+  height: 29.4rem;
+  margin-bottom: 2rem;
+}
+.today-block__text {
+  padding-left: 2rem;
+}
+.today-block__text p {
+  vertical-align: middle;
+  margin-bottom: 2rem;
+}
+.today-block-block__text p:last-child {
+  margin-bottom: 0;
+}
+
+.ranks {
+  margin-bottom: 5rem;
+}
+.ranks-block__title {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+.ranks-block__text {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 29px;
+}
+.ranks-block__image {
+  height: 29.4rem;
+  flex: 0 1 50%;
+}
+.ranks-block__image img {
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+.standarts {
+  margin-bottom: 10rem;
+}
+.standarts-block__image {
+  height: 285px;
+}
+.standarts-block__text {
+  padding-left: 2rem;
+}
+.standarts-block__text p {
+  margin-bottom: 2rem;
+}
+.standarts-block__text p:last-child {
+  margin-bottom: 0;
+}
+
 .contacts {
   margin-bottom: 2rem;
   height: 46.5rem;
@@ -636,12 +754,37 @@ body._lock {
   .container {
     max-width: none;
   }
+  .image-text-block {
+    flex-direction: column;
+  }
+  .image-text-block__body {
+    padding: 0;
+    flex-direction: column;
+  }
   .mission-block {
     flex-direction: column;
   }
   .mission-block__body {
     padding: 0;
     flex-direction: column;
+  }
+  .ranks-block__title {
+    padding: 0 1rem;
+  }
+  .image-text-block__body {
+    padding: 0 1rem;
+  }
+  .image-text-block__image {
+    padding: 0;
+  }
+  .image-text-block__text {
+    padding: 0;
+  }
+  .standarts-block__body {
+    flex-direction: column-reverse;
+  }
+  .standarts-block__image {
+    margin-top: 2rem;
   }
 }
 /* TABLET */
@@ -693,11 +836,23 @@ body._lock {
   .text-about-block__block:last-child {
     margin-bottom: 1rem;
   }
-  .mission-block__text {
+  .image-text-block__text {
     flex: 0 1 40%;
   }
-  .mission-block__image {
+  .image-text-block__image {
     flex: 0 1 60%;
+  }
+  .today-block__text {
+    flex: 0 1 50%;
+  }
+  .today-block__image {
+    flex: 0 1 50%;
+  }
+  .ranks-block__text {
+    flex: 0 1 60%;
+  }
+  .ranks-block__image {
+    flex: 0 1 40%;
   }
   .contacts {
     padding: 4rem 0;
@@ -737,12 +892,6 @@ body._lock {
   }
 }
 @media (max-width: 690.98px) {
-  .switch-language {
-    top: 25%;
-  }
-  .switch-language__menu._active {
-    top: 35%;
-  }
   .about-header h1 {
     font-size: 5.2rem;
     margin: 35rem 0rem 1rem 0rem;
@@ -814,12 +963,6 @@ body._lock {
 @media (max-width: 499.98px) {
   .container {
     padding: 0;
-  }
-  .switch-language {
-    top: 80%;
-  }
-  .switch-language__menu._active {
-    top: 115%;
   }
   .menu__icon {
     z-index: 5;
@@ -917,8 +1060,11 @@ body._lock {
     margin: 45rem 0rem 1rem 0rem;
     font-size: 4.8rem;
   }
-  .cards {
-    margin-top: 8rem;
+  .history {
+    margin-bottom: 7rem;
+  }
+  .history-block__text {
+    padding: 0 1rem;
   }
   .about-block__image {
     object-fit: cover;
